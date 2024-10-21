@@ -94,10 +94,10 @@
 
         numpad {
             bindings = <
-&none         &kp GRAVE          &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp MINUS        &kp N7        &kp N8        &kp N9        &kp BACKSPACE         &none
-&kp IT_LESS   &kp C_VOL_UP       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp EQUAL        &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp NON_US_BACKSLASH  &kp IT_AST
-&kp IT_GREAT  &kp C_VOLUME_DOWN  &kp COMMA          &kp PERIOD             &kp SEMICOLON    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH             &kp IT_FSLH
-                                                    &kp LEFT_SHIFT         &kp SPACE        &to 3         &tog 0
+&none         &kp GRAVE          &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp MINUS        &kp BSPC  &kp N7  &kp N8  &kp N9  &none
+&kp IT_LESS   &kp C_VOL_UP       &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp EQUAL        &none     &kp N4  &kp N5  &kp N6  &kp IT_AST
+&kp IT_GREAT  &kp C_VOLUME_DOWN  &kp COMMA          &kp PERIOD             &kp SEMICOLON    &none     &kp N1  &kp N2  &kp N3  &kp IT_FSLH
+                                                    &kp LEFT_SHIFT         &kp SPACE        &to 3     &tog 0
             >;
         };
 
