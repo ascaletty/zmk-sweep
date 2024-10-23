@@ -117,7 +117,7 @@
             bindings = <
 &kp ESC           &trans        &trans     &trans     &trans           &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
 &kp LC(Z)         &kp RC(X)     &kp LC(C)  &kp LC(V)  &kp COMMA        &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
-&kp LC(LEFT_ALT)  &kp LEFT_WIN  &kp LC(C)  &kp LC(V)  &kp RIGHT_ALT    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
+&kp LC(LEFT_ALT)  &kp LEFT_WIN  &kp LC(C)  &kp LC(V)  &kp BACKSPACE    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
                                            &to 0      &kp SPACE        &kp ENTER     &to FNC
             >;
         };
