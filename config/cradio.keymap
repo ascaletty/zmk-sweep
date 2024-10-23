@@ -93,10 +93,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q    &kp W           &kp E         &kp R               &kp T        &kp Y          &kp U               &kp I         &kp O           &kp P
-&mt LEFT_GUI A  &mt LEFT_ALT S  &mt LSHIFT D  &mt F LEFT_CONTROL  &kp G        &kp H          &mt LEFT_CONTROL J  &mt LSHIFT K  &mt LEFT_ALT L  &mt LEFT_WIN SEMICOLON
-&kp Z           &kp X           &kp C         &kp V               &kp B        &kp N          &kp M               &kp COMMA     &kp DOT         &kp SLASH
-                                              &lt 3 ENTER         &kp SPACE    &kp BACKSPACE  &to SYM
+&mt ESCAPE Q    &kp W           &kp E         &kp R               &kp T            &kp Y      &kp U               &kp I         &kp O           &kp P
+&mt LEFT_GUI A  &mt LEFT_ALT S  &mt LSHIFT D  &mt F LEFT_CONTROL  &kp G            &kp H      &mt LEFT_CONTROL J  &mt LSHIFT K  &mt LEFT_ALT L  &mt LEFT_WIN SEMICOLON
+&kp Z           &kp X           &kp C         &kp V               &kp B            &kp N      &kp M               &kp COMMA     &kp DOT         &kp SLASH
+                                              &lt 3 ENTER         &kp BACKSPACE    &kp SPACE  &to SYM
             >;
         };
 
@@ -118,7 +118,7 @@
 &kp ESC           &trans        &trans     &trans     &trans           &kp PG_UP     &kp HOME  &kp UP    &kp END    &kp CAPS
 &sk LC(Z)         &kp RC(X)     &kp LC(C)  &kp LC(V)  &kp COMMA        &kp PG_DN     &kp LEFT  &kp DOWN  &kp RIGHT  &kp DEL
 &kp LC(LEFT_ALT)  &kp LEFT_WIN  &kp LC(C)  &kp LC(V)  &kp RIGHT_ALT    &kp LC(BSPC)  &kp BSPC  &trans    &trans     &trans
-                                           &to 0      &kp LCTRL        &kp ENTER     &to FNC
+                                           &to 0      &kp SPACE        &kp ENTER     &to FNC
             >;
         };
 
