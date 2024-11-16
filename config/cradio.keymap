@@ -18,6 +18,36 @@
             tapping-term-ms = <349>;
             flavor = "tap-preferred";
         };
+
+        underscore: underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UNDERSCORE";
+            bindings = <&kp SQT>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        slash: slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH";
+            bindings = <&kp SLASH>, <&kp LESS_THAN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
+
+        dash: dash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DASH";
+            bindings = <&kp MINUS>, <&kp DOUBLE_QUOTES>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LSFT)>;
+        };
     };
 
     conditional_layers {
@@ -34,9 +64,9 @@
 
         default_layer {
             bindings = <
-&kp B                &kp L  &kp D             &kp W               &kp Z        &kp MINUS      &kp F               &kp O         &kp U    &kp J
-&pinkyhm LEFT_GUI N  &kp R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &kp E    &pinkyhm LEFT_GUI I
-&kp Q                &kp X  &kp M             &kp C               &kp V        &kp K          &kp P               &kp COMMA     &kp DOT  &kp FSLH
+&kp B                &kp L  &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U  &kp J
+&pinkyhm LEFT_GUI N  &kp R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &kp E  &pinkyhm LEFT_GUI I
+&kp Q                &kp X  &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash  &slash
                                               &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &lt 1 BSPC
             >;
         };
