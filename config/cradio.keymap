@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &mt {
     tapping-term-ms = <400>;
@@ -74,6 +75,11 @@
             bindings = <&to 3>;
             key-positions = <31 30>;
         };
+
+        nav {
+            bindings = <&to 4>;
+            key-positions = <30 33>;
+        };
     };
 
     keymap {
@@ -117,10 +123,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans    &trans  &trans
+&trans       &kp LS(TAB)     &mmv MOVE_UP    &trans           &trans    &trans    &mkp LCLK       &mkp RCLK     &trans     &trans
+&kp RA(TAB)  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&trans       &trans          &trans          &trans           &trans    &trans    &trans          &trans        &trans     &trans
+                                             &trans           &trans    &trans    &trans
             >;
         };
     };
