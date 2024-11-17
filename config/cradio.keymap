@@ -19,6 +19,9 @@
 
 / {
     behaviors {
+    &num_word {
+    layers = <1>;  // replace NUM by the location of numbers layer
+    };
         pinkyhm: pinkyhm {
             compatible = "zmk,behavior-hold-tap";
             label = "PINKYHM";
