@@ -11,7 +11,10 @@
     flavor = "tap-preferred";
 };
 
-&mmv { time-to-max-speed-ms = <200>; };
+&mmv {
+    time-to-max-speed-ms = <200>;
+    acceleration-exponent = <2>;
+};
 
 / {
     behaviors {
@@ -54,6 +57,14 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
+        numword: numword {
+            compatible = "zmk,behavior-caps-word";
+            label = "NUMWORD";
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            continue-list = <NUMBER_1 NUMBER_2 NUMBER_3 NUMBER_4 NUMBER_5 NUMBER_6 NUMBER_7 NUMBER_8 NUMBER_9 NUMBER_0 PERIOD>;
+        };
     };
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
@@ -78,6 +89,15 @@
         };
     };
 
+    macros {
+        numwordto: numwordto {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &numword>;
+            label = "NUMWORDTO";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -86,29 +106,29 @@
 &kp B                &kp L  &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U  &kp J
 &pinkyhm LEFT_GUI N  &kp R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &kp E  &pinkyhm LEFT_GUI I
 &kp Q                &kp X  &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash  &slash
-                                              &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &to 1
+                                              &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &numwordto
             >;
         };
 
         right_layer {
             bindings = <
-&trans  &trans  &trans  &trans      &trans       &kp HOME    &kp N7  &kp N8  &kp N9  &kp COLON
-&trans  &trans  &trans  &trans      &trans       &kp LEFT    &kp N4  &kp N5  &kp N6  &kp SEMI
-&trans  &trans  &trans  &trans      &trans       &kp PERIOD  &kp N1  &kp N2  &kp N3  &trans
-                        &kp ESCAPE  &kp SPACE    &to 2       &kp N0
+&trans  &trans  &trans  &trans  &trans       &kp HOME       &kp N7  &kp N8  &kp N9  &kp COLON
+&trans  &trans  &trans  &trans  &trans       &trans         &kp N4  &kp N5  &kp N6  &kp SEMI
+&trans  &trans  &trans  &trans  &trans       &kp PERIOD     &kp N1  &kp N2  &kp N3  &trans
+                        &to 2   &kp SPACE    &kp BACKSPACE  &kp N0
             >;
         };
 
         left_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH  &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE  &trans
+&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp RIGHT_BRACKET  &kp RPAR              &kp RIGHT_BRACE  &kp TILDE
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT_BRACE   &kp GRAVE
+&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER          &kp PLUS              &kp PIPE         &kp BACKSLASH
                               &trans    &trans       &trans     &trans
             >;
         };
 
-        tri_layer {
+        settings {
             bindings = <
 &sys_reset   &trans  &trans  &trans      &bt BT_SEL 0    &trans  &trans  &trans  &trans  &sys_reset
 &bootloader  &trans  &trans  &trans      &bt BT_SEL 1    &trans  &trans  &trans  &trans  &bootloader
