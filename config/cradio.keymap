@@ -91,15 +91,6 @@
         };
     };
 
-    macros {
-        numwordto: numwordto {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&to 1 &kp>;
-            label = "NUMWORDTO";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
