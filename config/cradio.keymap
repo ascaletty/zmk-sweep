@@ -19,6 +19,14 @@
 
 / {
     behaviors {
+    num_word: behavior_num_word {
+			compatible = "zmk,behavior-caps-word";
+			label = "NUM_WORD";
+			#binding-cells = <0>;
+            layers = <1>;                                // insert location of numbers layer here
+			continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
+            ignore-numbers;                                // numbers don't deactivate the layer
+		};
         pinkyhm: pinkyhm {
             compatible = "zmk,behavior-hold-tap";
             label = "PINKYHM";
@@ -106,7 +114,7 @@
 &kp B                &kp L  &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U  &kp J
 &pinkyhm LEFT_GUI N  &kp R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &kp E  &pinkyhm LEFT_GUI I
 &kp Q                &kp X  &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash  &slash
-                                              &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &numwordto
+                                              &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &num_word
             >;
         };
 
