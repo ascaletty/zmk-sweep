@@ -72,8 +72,9 @@
         };
 
         settings {
-            bindings = <&to 3>;
+            bindings = <&mo 3>;
             key-positions = <31 30>;
+            layers = <0 2 3 4 1>;
         };
 
         nav {
