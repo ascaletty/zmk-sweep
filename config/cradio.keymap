@@ -11,6 +11,8 @@
     flavor = "tap-preferred";
 };
 
+&mmv { time-to-max-speed-ms = <200>; };
+
 / {
     behaviors {
         pinkyhm: pinkyhm {
