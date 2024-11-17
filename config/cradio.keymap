@@ -100,10 +100,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &mmv MOVE_UP  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans        &trans  &trans    &trans  &trans  &trans  &trans  &trans
-                              &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans    &trans  &trans
             >;
         };
     };
