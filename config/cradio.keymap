@@ -59,6 +59,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        homepanic {
+            bindings = <&to 0>;
+            key-positions = <31 32>;
+        };
+
+        settings {
+            bindings = <&to 3>;
+            key-positions = <31 30>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
