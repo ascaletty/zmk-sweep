@@ -19,14 +19,6 @@
 
 / {
     behaviors {
-    num-word: num-word {
-	compatible = "zmk,behavior-caps-word";
-	label = "NUM-WORD";
-	#binding-cells = <0>;
-            layers = <1>;                                // insert location of numbers layer here
-		continue-list = <BACKSPACE DELETE DOT COMMA>;  // adjust as desired
-            ignore-numbers;                                // numbers don't deactivate the layer
-		};
         pinkyhm: pinkyhm {
             compatible = "zmk,behavior-hold-tap";
             label = "PINKYHM";
@@ -101,7 +93,7 @@
         numwordto: numwordto {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &num-word>;
+            bindings = <&to 1 &numword>;
             label = "NUMWORDTO";
         };
     };
