@@ -98,7 +98,7 @@
             bindings = <
 &mt ESCAPE B         &kp L           &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U           &kp J
 &pinkyhm LEFT_GUI N  &mt LEFT_ALT R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &mt LEFT_ALT E  &pinkyhm LEFT_GUI I
-&mt TAB Q            &kp X           &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash           &slash
+&kp Q                &kp X           &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash           &slash
                                                        &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &num_word
             >;
         };
@@ -114,10 +114,10 @@
 
         left_layer {
             bindings = <
-&trans    &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp RIGHT_BRACKET  &kp RPAR              &kp RIGHT_BRACE  &kp TILDE
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT_BRACE   &kp GRAVE
-&trans    &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER          &kp PLUS              &kp PIPE         &kp BACKSLASH
-                              &trans    &trans       &trans     &trans
+&trans     &kp LBKT  &kp LBRC  &kp RBRC  &trans       &kp CARET  &kp RIGHT_BRACKET  &kp RPAR              &kp RIGHT_BRACE  &kp TILDE
+&kp EXCL   &kp AT    &kp HASH  &kp DLLR  &kp PRCNT    &kp ASTRK  &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS  &kp LEFT_BRACE   &kp GRAVE
+&kp EQUAL  &trans    &trans    &trans    &trans       &kp AMPS   &kp UNDER          &kp PLUS              &kp PIPE         &kp BACKSLASH
+                               &trans    &trans       &trans     &trans
             >;
         };
 
