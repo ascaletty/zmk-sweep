@@ -96,9 +96,9 @@
 
         default_layer {
             bindings = <
-&kp B                &kp L           &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U           &kp J
+&mt ESCAPE B         &kp L           &kp D             &kp W               &kp Z        &underscore    &kp F               &kp O         &kp U           &kp J
 &pinkyhm LEFT_GUI N  &mt LEFT_ALT R  &mt LEFT_SHIFT T  &mt LEFT_CONTROL S  &kp G        &kp Y          &mt LEFT_CONTROL H  &mt LSHIFT A  &mt LEFT_ALT E  &pinkyhm LEFT_GUI I
-&kp Q                &kp X           &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash           &slash
+&mt TAB Q            &kp X           &kp M             &kp C               &kp V        &kp K          &kp P               &kp PERIOD    &dash           &slash
                                                        &lt 2 ENTER         &kp SPACE    &kp BACKSPACE  &num_word
             >;
         };
